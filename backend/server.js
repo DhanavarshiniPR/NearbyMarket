@@ -27,6 +27,21 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/ecoexchan
 .then(() => console.log('Connected to MongoDB'))
 .catch((err) => console.error('MongoDB connection error:', err));
 
+// Health check route
+app.get('/', (req, res) => {
+  res.json({ 
+    message: 'EcoExchange API is running!', 
+    status: 'success',
+    timestamp: new Date().toISOString(),
+    endpoints: {
+      products: '/api/products',
+      users: '/api/users',
+      orders: '/api/orders',
+      upload: '/api/upload'
+    }
+  });
+});
+
 app.use('/api/products', productRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/orders', orderRoutes);
