@@ -1,0 +1,114 @@
+
+.nav-toggle-btn {
+    background-color: #af89e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 100;
+  }
+  
+  .modal-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(78, 73, 73, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+  }
+  
+  .modal-links {
+    background-color: #6200ea;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .modal-links a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .modal-links a:hover {
+    background-color: #bb86fc;
+  }
+  
+ 
+  .gadgets-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .gadgets-container h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .gadgets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .gadget-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .gadget-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .gadget-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .gadget-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  
+  .gadget-card p {
+    color: #f261ff;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .buy-btn {
+    background-color: #c96dee;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+  }
+  
+  .buy-btn:hover {
+    background-color: #da52e6;
+  }
+  

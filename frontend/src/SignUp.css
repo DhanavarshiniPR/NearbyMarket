@@ -1,0 +1,241 @@
+/* Signup.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+  overflow-x: hidden;
+  background: linear-gradient(to right, #ebe6ec, #8a7383);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.signup-paper {
+  padding: 2rem;
+  border-radius: 16px !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+  width: 100%;
+}
+
+.signup-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.signup-title {
+  font-weight: 700 !important;
+  background: linear-gradient(120deg, #2196f3, #1976d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem !important;
+}
+
+.signup-stepper {
+  width: 100%;
+  margin: 1rem 0 2rem !important;
+}
+
+.signup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.signup-alert {
+  width: 100%;
+  margin-bottom: 1rem !important;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.back-button {
+  min-width: 100px !important;
+}
+
+.next-button,
+.submit-button {
+  min-width: 120px !important;
+  height: 48px;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  font-size: 1rem !important;
+  background: linear-gradient(45deg, #1976d2, #2196f3) !important;
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.2) !important;
+  transition: transform 0.2s ease !important;
+}
+
+.next-button:hover,
+.submit-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(33, 150, 243, 0.3) !important;
+}
+
+.divider {
+  width: 100%;
+  margin: 2rem 0 !important;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.google-button,
+.facebook-button {
+  height: 44px;
+  text-transform: none !important;
+  font-weight: 500 !important;
+  border-radius: 8px !important;
+  transition: all 0.2s ease !important;
+}
+
+.google-button {
+  border-color: #ea4335 !important;
+  color: #ea4335 !important;
+}
+
+.google-button:hover {
+  background-color: rgba(234, 67, 53, 0.04) !important;
+}
+
+.facebook-button {
+  border-color: #1877f2 !important;
+  color: #1877f2 !important;
+}
+
+.facebook-button:hover {
+  background-color: rgba(24, 119, 242, 0.04) !important;
+}
+
+.login-prompt {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.login-link {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.login-link:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+.terms-link {
+  color: #1976d2;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.terms-link:hover {
+  color: #1565c0;
+  text-decoration: underline;
+}
+
+/* Animation classes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .signup-container {
+    padding: 1rem;
+  }
+
+  .signup-paper {
+    padding: 1.5rem;
+  }
+
+  .signup-stepper {
+    margin: 0.5rem 0 1.5rem !important;
+  }
+
+  .button-group {
+    flex-direction: column-reverse;
+  }
+
+  .back-button,
+  .next-button,
+  .submit-button {
+    width: 100% !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .signup-container {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d3748 100%);
+  }
+
+  .signup-paper {
+    background-color: #2d3748 !important;
+    color: #fff !important;
+  }
+
+  .signup-title {
+    background: linear-gradient(120deg, #90caf9, #42a5f5);
+    -webkit-background-clip: text;
+  }
+
+  .login-link,
+  .terms-link {
+    color: #90caf9;
+  }
+
+  .login-link:hover,
+  .terms-link:hover {
+    color: #42a5f5;
+  }
+
+  .next-button,
+  .submit-button {
+    background: linear-gradient(45deg, #1976d2, #42a5f5) !important;
+  }
+
+  .google-button,
+  .facebook-button {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  .google-button:hover,
+  .facebook-button:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+}

@@ -1,0 +1,96 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    background-color: #ebd0d0;
+    padding: 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #ff61ff;
+    border-radius: 5px;
+}
+
+.fashion-container {
+    padding: 20px;
+    text-align: center;
+}
+
+.fashion-container h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #333;
+}
+
+.fashion-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fashion-card {
+    background-color: rgb(245, 243, 243);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+.nav-toggle-btn{
+    background-color: rgb(230, 192, 240);
+}
+
+.fashion-card:hover {
+    transform: translateY(-10px);
+}
+
+.fashion-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.fashion-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.fashion-card p {
+    color: #381438;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.buy-btn {
+    background-color: #a55bcf;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+.buy-btn:hover {
+    background-color: #c16ae9;
+}

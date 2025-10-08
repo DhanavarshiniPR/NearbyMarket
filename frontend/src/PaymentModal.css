@@ -1,0 +1,194 @@
+.payment-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  overflow-y: auto; 
+  padding: 20px; 
+}
+
+.payment-modal {
+  background-color: white;
+  border-radius: 12px;
+  padding: 2rem;
+  width: 100%;
+  max-width: 500px;
+  max-height: 90vh; 
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  overflow-y: auto; 
+  display: flex;
+  flex-direction: column;
+}
+.modal-content {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 8px;
+}
+.payment-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.payment-modal::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.payment-modal::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.payment-modal::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.MuiDialog-paper {
+  overflow: visible !important;
+}
+
+.payment-method-icon {
+  font-size: 24px;
+  margin-right: 12px;
+  color: var(--primary);
+}
+
+.MuiFormControlLabel-root:hover {
+  background-color: rgba(106, 27, 154, 0.04);
+  border-radius: 8px;
+}
+
+.card-form {
+  display: grid;
+  gap: 16px;
+}
+.MuiTextField-root {
+  background-color: #fff;
+}
+
+.MuiOutlinedInput-root {
+  transition: transform 0.2s ease-in-out;
+}
+
+.MuiOutlinedInput-root:hover {
+  transform: translateY(-1px);
+}
+
+.MuiStepLabel-root {
+  color: var(--primary) !important;
+}
+
+.MuiStepIcon-root.Mui-active {
+  color: var(--primary) !important;
+}
+
+.MuiStepIcon-root.Mui-completed {
+  color: var(--success) !important;
+}
+
+.order-summary {
+  background-color: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.fade-enter {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.fade-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+  .MuiDialog-paper {
+    margin: 16px;
+  }
+  
+  .card-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+.success-checkmark {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  position: relative;
+  animation: checkmark 0.5s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+@keyframes checkmark {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+.error-shake {
+  animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
